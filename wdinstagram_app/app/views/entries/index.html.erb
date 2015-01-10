@@ -1,0 +1,13 @@
+<h1><%= link_to 'New Entry', new_entry_path %></h1>
+
+<% @entries.each do |entry| %>
+	<div>
+		<h1><%= entry.author %></h1>
+		<img href="<%= entry.photo_url %>">
+		<p><%= entry.caption %></p>
+		<p><%= entry.date_taken %></p>
+		<%= link_to "Entry Page", entry_path(entry) %>
+		<%= link_to "Edit Entry", edit_entry_path(entry) %>
+		<%= link_to "Destroy Entry", entry_path(entry), method: :delete %>
+	</div>
+<% end %>
