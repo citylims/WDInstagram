@@ -1,0 +1,8 @@
+<div>
+	<h2><%= @entry.author %></h2>
+	<img src="<%= @entry.photo_url %>"> 
+	<p><%= @entry.caption %></p>
+	<p><%= @entry.date_taken %></p>
+	<%= link_to "Edit Entry", edit_entry_path(@entry)%>
+	<%= link_to "Back", entries_path %>
+</div>
