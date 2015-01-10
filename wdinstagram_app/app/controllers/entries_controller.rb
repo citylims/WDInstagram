@@ -18,7 +18,7 @@ class EntriesController < ApplicationController
   end
 
   def create
-  	@entry = Entry.build(joke_params)
+  	@entry = Entry.new(entry_params)
   	if @entry.save
   		redirect_to entry_path(@entry)
   	else
