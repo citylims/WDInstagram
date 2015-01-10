@@ -3,7 +3,7 @@
 <% @entries.each do |entry| %>
 	<div>
 		<h1><%= entry.author %></h1>
-		<img href="<%= entry.photo_url %>">
+		<img src="<%= entry.photo_url %>">
 		<p><%= entry.caption %></p>
 		<p><%= entry.date_taken %></p>
 		<%= link_to "Entry Page", entry_path(entry) %>
