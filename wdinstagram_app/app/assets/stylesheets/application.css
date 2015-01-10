@@ -1,10 +1,21 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 img {
 	max-width: 500px;
 	max-height: 600px;
 }
 
 .container {
-	width: 60%;
+	width: 50%;
 	margin: auto;
 	padding-top: 20px;
+	padding-left: 100px;
+}
+
+.container h2 {
+	font-size: 2em;
+	text-decoration: underline;
+
 }
