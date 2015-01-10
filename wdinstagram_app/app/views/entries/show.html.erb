@@ -1,8 +1,9 @@
-<div>
-	<h2><%= @entry.author %></h2>
+<div class="container">
+	<h2>Entry</h2>
+	<h3>Author: <%= @entry.author %></h3>
 	<img src="<%= @entry.photo_url %>"> 
-	<p><%= @entry.caption %></p>
-	<p><%= @entry.date_taken %></p>
+	<p>Caption: <%= @entry.caption %></p>
+	<p>Date Taken:<%= @entry.date_taken %></p>
 	<%= link_to "Edit Entry", edit_entry_path(@entry)%>
 	<%= link_to "Back", entries_path %>
 </div>

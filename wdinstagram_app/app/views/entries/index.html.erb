@@ -1,13 +1,13 @@
-<h1><%= link_to 'New Entry', new_entry_path %></h1>
-
-<% @entries.each do |entry| %>
-	<div>
-		<h1>Authour: <%= entry.author %></h1>
-		<img src="<%= entry.photo_url %>">
-		<p><%= entry.caption %></p>
-		<p><%= entry.date_taken %></p>
-		<%= link_to "Entry Page", entry_path(entry) %>
-		<%= link_to "Edit Entry", edit_entry_path(entry) %>
-		<%= link_to "Destroy Entry", entry_path(entry), method: :delete %>
-	</div>
-<% end %>
+<h2><%= link_to 'New Entry', new_entry_path %></h2>
+<div class="container">
+	<h2>Entries</h2>
+	<% @entries.each do |entry| %>
+			<h3>Author: <%= entry.author %></h3>
+			<img src="<%= entry.photo_url %>">
+			<p>Caption: <%= entry.caption %></p>
+			<p>Date Taken: <%= entry.date_taken %></p>
+			<%= link_to "Entry Page", entry_path(entry) %>
+			<%= link_to "Edit Entry", edit_entry_path(entry) %>
+			<%= link_to "Destroy Entry", entry_path(entry), method: :delete %>
+	<% end %>
+</div>
